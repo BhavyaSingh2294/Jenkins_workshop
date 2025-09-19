@@ -1,0 +1,34 @@
+services:
+ mru-prod-test-img:
+  # will build the image
+    build:
+      context: .
+    volumes:
+      - ./:/app:ro
+    # .environment: 
+    environment:
+      - NODE_ENV=production
+    command: npm run prod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# code running till 19/09/2025
+# services:
+#  mru-exp-img:
+#     volumes:
+#       - ./:/app:ro
+#     # .environment: 
+#     environment:
+#       - NODE_ENV=production
+#     command: npm run prod

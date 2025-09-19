@@ -1,0 +1,12 @@
+services:
+ mru-exp-img:
+ #will build the image
+    
+    #Anonymous read-only volume
+    volumes:
+      - ./:/app:ro
+    # .environment: 
+    environment:
+      - NODE_ENV=development
+    # -PORT=9898
+    command: npm run dev
